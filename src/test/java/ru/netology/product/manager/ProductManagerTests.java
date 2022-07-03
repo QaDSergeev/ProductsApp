@@ -29,10 +29,10 @@ public class ProductManagerTests {
         productManager.add(smartphone1);
         productManager.add(smartphone2);
 
-        Product[] actualProducts = {book1};
-        Product[] expectedProducts = productManager.searchBy(book1.getName());
+        Product[] expectedProducts = {book1};
+        Product[] actualProducts = productManager.searchBy(book1.getName());
 
-        assertArrayEquals(actualProducts, expectedProducts);
+        assertArrayEquals(expectedProducts, actualProducts);
     }
 
     @Test
