@@ -10,4 +10,22 @@ public class Smartphone extends Product {
 
         this.manufacture = manufacture;
     }
+
+    public String getManufacture(){
+
+        return manufacture;
+    }
+
+    @Override
+    public boolean matches(String search) {
+
+        boolean isMatch = super.matches(search);
+
+        if (!isMatch) {
+
+            isMatch = getManufacture().contains(search);
+        }
+
+        return isMatch;
+    }
 }

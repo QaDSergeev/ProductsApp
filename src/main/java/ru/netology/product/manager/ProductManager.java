@@ -23,7 +23,7 @@ public class ProductManager {
 
         for (Product product : repository.getAllProducts()) {
 
-            if (matches(product, text)) {
+            if (product.matches(text)) {
 
                 Product[] tmp = new Product[result.length + 1];
 
@@ -40,8 +40,4 @@ public class ProductManager {
         return result;
     }
 
-    private boolean matches(Product product, String search) {
-
-        return product.getName().contains(search);
-    }
 }
