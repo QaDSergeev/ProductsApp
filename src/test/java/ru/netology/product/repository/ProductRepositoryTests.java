@@ -43,8 +43,8 @@ public class ProductRepositoryTests {
 
         repository.removeProduct(smartphone2.getId());
 
-        Product[] actualProducts = {book1, book2, smartphone1};
-        Product[] expectedProducts = repository.getAllProducts();
+        Product[] expectedProducts = {book1, book2, smartphone1};
+        Product[] actualProducts = repository.getAllProducts();
 
         assertArrayEquals(expectedProducts, actualProducts);
     }
@@ -61,8 +61,8 @@ public class ProductRepositoryTests {
 
         repository.removeProduct(book1.getId());
 
-        Product[] actualProducts = {book2, smartphone1, smartphone2};
-        Product[] expectedProducts = repository.getAllProducts();
+        Product[] expectedProducts = {book2, smartphone1, smartphone2};
+        Product[] actualProducts = repository.getAllProducts();
 
         assertArrayEquals(expectedProducts, actualProducts);
     }
@@ -79,8 +79,8 @@ public class ProductRepositoryTests {
 
         repository.removeProduct(smartphone1.getId());
 
-        Product[] actualProducts = {book1, book2, smartphone2};
-        Product[] expectedProducts = repository.getAllProducts();
+        Product[] expectedProducts = {book1, book2, smartphone2};
+        Product[] actualProducts = repository.getAllProducts();
 
         assertArrayEquals(expectedProducts, actualProducts);
     }
